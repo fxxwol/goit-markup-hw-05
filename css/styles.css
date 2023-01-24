@@ -146,7 +146,7 @@ header {
 
 .active::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   content: "";
   display: block;
   width: 100%;
@@ -491,21 +491,29 @@ header {
   top: 24px;
   right: 24px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 24px;
   height: 24px;
-  text-align: center;
-  padding: 6px;
 
   border-radius: 50%;
   background: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+
+  transition: backgroun-color 250ms var(--cubic), fill 250ms var(--cubic);
+}
+
+.close-btn:is(:hover, :focus) {
+  background-color: var(--accent-color);
+  fill: var(--white);
 }
 
 .close-icon {
   width: 8px;
   height: 8px;
-  margin-bottom: 5px;
 }
 
 .btn.btn-filter {

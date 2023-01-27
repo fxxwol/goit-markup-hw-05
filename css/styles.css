@@ -516,6 +516,127 @@ header {
   height: 8px;
 }
 
+.modal-title {
+  position: absolute;
+  top: 72px;
+  left: 50%;
+
+  transform: translate(-50%);
+  width: 360px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-text-color);
+}
+
+.form {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: left;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.form-input:focus-visible,
+.comment:focus-visible {
+  outline: none;
+}
+
+.form-field:focus-within .form-input,
+.form-field:focus-within .comment,
+.form-field:focus-within .form-icon {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  top: -20px;
+  left: 0;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: #8e8f99;
+}
+
+.form-icon {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  width: 18px;
+  height: 24px;
+  transition: fill 250ms var(--cubic);
+}
+
+.comment {
+  resize: none;
+  width: 360px;
+  height: 120px;
+  padding: 8px 16px 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms var(--cubic);
+}
+
+.comment::placeholder {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-input {
+  width: 360px;
+  padding: 8px 0px 8px 34px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms var(--cubic);
+}
+
+.policy-link {
+  color: var(--accent-color);
+}
+
+.checkbox {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.checkbox-label {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
+.btn.send {
+  width: fit-content;
+  height: 56px;
+  padding: 16px 65px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  display: block;
+  margin: 0 auto;
+}
+
 .btn.btn-filter {
   color: var(--accent-color);
   background-color: var(--btn-primary-color);
